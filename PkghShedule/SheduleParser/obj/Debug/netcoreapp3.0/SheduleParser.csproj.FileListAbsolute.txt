@@ -5,3 +5,4 @@ C:\Users\vlad\Documents\GitHub\ptu-shedule\PkghShedule\SheduleParser\obj\Debug\n
 C:\Users\vlad\Documents\GitHub\ptu-shedule\PkghShedule\SheduleParser\obj\Debug\netcoreapp3.0\SheduleParser.AssemblyInfo.cs
 C:\Users\vlad\Documents\GitHub\ptu-shedule\PkghShedule\SheduleParser\obj\Debug\netcoreapp3.0\SheduleParser.dll
 C:\Users\vlad\Documents\GitHub\ptu-shedule\PkghShedule\SheduleParser\obj\Debug\netcoreapp3.0\SheduleParser.pdb
+C:\Users\vlad\Documents\GitHub\ptu-shedule\PkghShedule\SheduleParser\obj\Debug\netcoreapp3.0\SheduleParser.csprojAssemblyReference.cache

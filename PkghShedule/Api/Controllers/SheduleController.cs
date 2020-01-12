@@ -23,6 +23,7 @@ namespace Api.Controllers
         public async Task<string> Get(string groupName)
         {
             var shedule = await Parser.Parse(groupName);
+
             return shedule;
         }
     }
