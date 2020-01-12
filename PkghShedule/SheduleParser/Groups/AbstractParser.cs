@@ -11,7 +11,7 @@ namespace SheduleParser.Groups
         public string StartWord { get; set; }
         public string EndWord { get; set; }
 
-        private readonly List<string> daysOfTheWeek = new List<string>
+        protected readonly List<string> daysOfTheWeek = new List<string>
         {
             "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"
         };

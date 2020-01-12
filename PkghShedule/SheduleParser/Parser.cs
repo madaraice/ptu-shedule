@@ -1,5 +1,4 @@
-﻿using System.Dynamic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Flurl.Http;
 using HtmlAgilityPack;
@@ -15,6 +14,8 @@ namespace SheduleParser
 
         public static async Task<string> Parse(string group = "default")
         {
+            if (!Groups.Groups.GroupsMap.ContainsKey(group)) return "Такой группы нет в списке!";
+
             HtmlDocument html = new HtmlDocument();
             html.LoadHtml(await SheduleUrl.GetStringAsync());
 

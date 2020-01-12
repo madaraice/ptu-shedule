@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SheduleParser
+﻿namespace SheduleParser
 {
     internal static class TextBeautifier
     {
         public static string Beauty(string inputData)
         {
             inputData = inputData.Replace("\r", "");
-            
+
             for (int i = 0; i < inputData.Length; i++)
             {
                 if (i == inputData.Length - 1) break;
@@ -19,7 +15,7 @@ namespace SheduleParser
                     inputData = inputData.Remove(i, 1);
                 }
             }
-            
+
             return inputData;
         }
     }
