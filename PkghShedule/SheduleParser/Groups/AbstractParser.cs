@@ -28,6 +28,7 @@ namespace SheduleParser.Groups
             int startLocalIndex;
             int endLocalIndex;
             var daysOfTheWeekWithShedule = new Dictionary<string, string>();
+            string substringShedule;
 
             for (int i = 0; i < daysOfTheWeek.Count; i++)
             {
@@ -35,26 +36,25 @@ namespace SheduleParser.Groups
                 {
                     startLocalIndex = shedule.IndexOf(daysOfTheWeek[i]);
                     endLocalIndex = shedule.IndexOf("Последнее");
-                    var substringLocalShedule = shedule.Substring(startLocalIndex + daysOfTheWeek[i].Length,
+                    substringShedule = shedule.Substring(startLocalIndex + daysOfTheWeek[i].Length,
                         endLocalIndex - startLocalIndex - daysOfTheWeek[i].Length);
 
-                    daysOfTheWeekWithShedule[$"{daysOfTheWeek[i]}"] = TextBeautifier.Beauty(substringLocalShedule);
+                    daysOfTheWeekWithShedule[$"{daysOfTheWeek[i]}"] = TextBeautifier.Beauty(substringShedule);
                     break;
                 }
 
                 startLocalIndex = shedule.IndexOf(daysOfTheWeek[i]);
                 endLocalIndex = shedule.IndexOf(daysOfTheWeek[i + 1]);
 
-                var substringShedule = shedule.Substring(startLocalIndex + daysOfTheWeek[i].Length,
+                substringShedule = shedule.Substring(startLocalIndex + daysOfTheWeek[i].Length,
                     endLocalIndex - startLocalIndex - daysOfTheWeek[i].Length);
 
                 daysOfTheWeekWithShedule[$"{daysOfTheWeek[i]}"] = TextBeautifier.Beauty(substringShedule);
             }
 
             result.shedule = daysOfTheWeekWithShedule;
-            var json = JsonConvert.SerializeObject(result);
 
-            return json;
+            return JsonConvert.SerializeObject(result);
         }
     }
 }
