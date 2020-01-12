@@ -958,20 +958,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
-      },
-      "SheduleParser/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "dependencies": {
-          "Flurl.Http": "2.4.2",
-          "HtmlAgilityPack": "1.11.17"
-        },
-        "compile": {
-          "bin/placeholder/SheduleParser.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SheduleParser.dll": {}
-        }
       }
     }
   },
@@ -3519,16 +3505,12 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "SheduleParser/1.0.0": {
-      "type": "project",
-      "path": "../SheduleParser/SheduleParser.csproj",
-      "msbuildProject": "../SheduleParser/SheduleParser.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "SheduleParser >= 1.0.0"
+      "Flurl.Http >= 2.4.2",
+      "HtmlAgilityPack >= 1.11.17"
     ]
   },
   "packageFolders": {
@@ -3538,11 +3520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\Test\\Test.csproj",
-      "projectName": "Test",
-      "projectPath": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\SheduleParser\\SheduleParser.csproj",
+      "projectName": "SheduleParser",
+      "projectPath": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\SheduleParser\\SheduleParser.csproj",
       "packagesPath": "C:\\Users\\vlad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\Test\\obj\\",
+      "outputPath": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\SheduleParser\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3560,11 +3542,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {
-            "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\SheduleParser\\SheduleParser.csproj": {
-              "projectPath": "C:\\Users\\vlad\\Documents\\GitHub\\ptu-shedule\\PkghShedule\\SheduleParser\\SheduleParser.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -3575,6 +3553,16 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "dependencies": {
+          "Flurl.Http": {
+            "target": "Package",
+            "version": "[2.4.2, )"
+          },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.11.17, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
