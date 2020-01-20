@@ -73,11 +73,22 @@ namespace TelegramBot
                                 $"Среда: \n {shedule.shedule["Среда"]} \n" +
                                 $"Четверг: \n {shedule.shedule["Четверг"]} \n" +
                                 $"Пятница: \n {shedule.shedule["Пятница"]}";
-                                      
+
+                            int startIndex = result.Length / 2;
+
+                            var result1 = result
+                                .Substring(0, startIndex);
+
+                            var result2 = result
+                                .Substring(startIndex, result.Length - startIndex);
 
                             await Bot.SendTextMessageAsync(
                                 message.Chat.Id,
-                                result);
+                                result1);
+                            
+                            await Bot.SendTextMessageAsync(
+                                message.Chat.Id,
+                                result2);
                         }
 
                         offset = update.Id + 1;
